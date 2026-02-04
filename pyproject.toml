@@ -12,7 +12,7 @@ members = [
 ]
 
 [tool.uv.sources]
-bakery = { workspace = true }
+my-bakery = { workspace = true }
 flowershop = { workspace = true }
 pos-system = { workspace = true }
 project-testing-tools = { workspace = true }
@@ -22,7 +22,7 @@ dev = [
     "ruff~=0.14.0"
 ]
 apps = [
-    "bakery",
+    "my-bakery",
     "flowershop",
 ]
 libs = [

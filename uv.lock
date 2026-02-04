@@ -4,37 +4,12 @@ requires-python = ">=3.12"
 
 [manifest]
 members = [
-    "bakery",
     "flowershop",
+    "my-bakery",
     "pos-system",
     "project-testing-tools",
     "workspace",
 ]
-
-[[package]]
-name = "bakery"
-version = "0.1.0"
-source = { virtual = "apps/bakery" }
-dependencies = [
-    { name = "pos-system" },
-    { name = "psycopg", extra = ["binary", "pool"] },
-    { name = "sqlalchemy" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "project-testing-tools" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "pos-system", editable = "libs/pos_system" },
-    { name = "psycopg", extras = ["binary", "pool"], specifier = "~=3.2.10" },
-    { name = "sqlalchemy", specifier = "==2.0.40" },
-]
-
-[package.metadata.requires-dev]
-dev = [{ name = "project-testing-tools", editable = "libs/testing_tools" }]
 
 [[package]]
 name = "certifi"
@@ -266,6 +241,31 @@ sdist = { url = "https://files.pythonhosted.org/packages/72/34/14ca021ce8e5dfedc
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/b1/3846dd7f199d53cb17f49cba7e651e9ce294d8497c8c150530ed11865bb8/iniconfig-2.3.0-py3-none-any.whl", hash = "sha256:f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12", size = 7484, upload-time = "2025-10-18T21:55:41.639Z" },
 ]
+
+[[package]]
+name = "my-bakery"
+version = "0.1.0"
+source = { virtual = "apps/bakery" }
+dependencies = [
+    { name = "pos-system" },
+    { name = "psycopg", extra = ["binary", "pool"] },
+    { name = "sqlalchemy" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "project-testing-tools" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pos-system", editable = "libs/pos_system" },
+    { name = "psycopg", extras = ["binary", "pool"], specifier = "~=3.2.10" },
+    { name = "sqlalchemy", specifier = "==2.0.40" },
+]
+
+[package.metadata.requires-dev]
+dev = [{ name = "project-testing-tools", editable = "libs/testing_tools" }]
 
 [[package]]
 name = "packaging"
@@ -520,8 +520,8 @@ source = { virtual = "." }
 
 [package.dev-dependencies]
 apps = [
-    { name = "bakery" },
     { name = "flowershop" },
+    { name = "my-bakery" },
 ]
 dev = [
     { name = "ruff" },
@@ -535,8 +535,8 @@ libs = [
 
 [package.metadata.requires-dev]
 apps = [
-    { name = "bakery", virtual = "apps/bakery" },
     { name = "flowershop", virtual = "apps/flowershop" },
+    { name = "my-bakery", virtual = "apps/bakery" },
 ]
 dev = [{ name = "ruff", specifier = "~=0.14.0" }]
 libs = [
