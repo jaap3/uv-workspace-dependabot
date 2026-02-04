@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    image: app
+    container_name: app
+    volumes:
+      - ..:/workspace:cached
+    command: sleep infinity

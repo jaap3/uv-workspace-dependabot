@@ -1,0 +1,10 @@
+[tool.uv.workspace]
+members = [
+    "apps/*",
+    "libs/*",
+]
+
+[dependency-groups]
+dev = [
+    "ruff~=0.14.0"
+]

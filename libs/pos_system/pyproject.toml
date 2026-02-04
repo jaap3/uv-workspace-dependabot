@@ -1,0 +1,16 @@
+[project]
+name = "pos-system"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "requests~=2.31.0"
+]
+
+
+[build-system]
+requires = ["uv_build>=0.9.9"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pos_system"
+module-root = ""

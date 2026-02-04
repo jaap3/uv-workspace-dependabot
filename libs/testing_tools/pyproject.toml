@@ -1,0 +1,16 @@
+[project]
+name = "project-testing-tools"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "pytest~=9.0.0",
+    "pytest-cov~=6.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.9"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "testing_tools"
+module-root = ""
