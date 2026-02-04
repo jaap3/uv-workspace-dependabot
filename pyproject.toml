@@ -11,7 +11,21 @@ members = [
     "libs/*",
 ]
 
+[tool.uv.sources]
+bakery = { workspace = true }
+flowershop = { workspace = true }
+pos-system = { workspace = true }
+project-testing-tools = { workspace = true }
+
 [dependency-groups]
 dev = [
     "ruff~=0.14.0"
+]
+apps = [
+    "bakery",
+    "flowershop",
+]
+libs = [
+    "project-testing-tools",
+    "pos-system",
 ]

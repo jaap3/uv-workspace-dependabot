@@ -519,11 +519,27 @@ version = "0.1.0"
 source = { virtual = "." }
 
 [package.dev-dependencies]
+apps = [
+    { name = "bakery" },
+    { name = "flowershop" },
+]
 dev = [
     { name = "ruff" },
+]
+libs = [
+    { name = "pos-system" },
+    { name = "project-testing-tools" },
 ]
 
 [package.metadata]
 
 [package.metadata.requires-dev]
+apps = [
+    { name = "bakery", virtual = "apps/bakery" },
+    { name = "flowershop", virtual = "apps/flowershop" },
+]
 dev = [{ name = "ruff", specifier = "~=0.14.0" }]
+libs = [
+    { name = "pos-system", editable = "libs/pos_system" },
+    { name = "project-testing-tools", editable = "libs/testing_tools" },
+]
