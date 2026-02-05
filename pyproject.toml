@@ -12,7 +12,7 @@ project-testing-tools = { workspace = true }
 
 [dependency-groups]
 dev = [
-    "ruff~=0.14.0"
+    "ruff~=0.15.0"
 ]
 apps = [
     "my-bakery",
